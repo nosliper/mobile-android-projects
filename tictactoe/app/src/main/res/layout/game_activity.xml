@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".GameActivity">
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/square8"
+        app:layout_constraintEnd_toEndOf="@+id/square3"
+        app:layout_constraintStart_toStartOf="@+id/square1"
+        app:layout_constraintTop_toTopOf="@+id/square8" />
+
+    <TextView
+        android:id="@+id/square9"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/square8"
+        app:layout_constraintTop_toBottomOf="@+id/square6" />
+
+    <TextView
+        android:id="@+id/square8"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/square9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/square7"
+        app:layout_constraintTop_toBottomOf="@+id/square5" />
+
+    <TextView
+        android:id="@+id/square4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/square5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/square1" />
+
+    <TextView
+        android:id="@+id/square7"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/square8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/square4" />
+
+    <TextView
+        android:id="@+id/square1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="208dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/square2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/square2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="208dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/square3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/square1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/square3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="208dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/square2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/square6"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/square5"
+        app:layout_constraintTop_toBottomOf="@+id/square3" />
+
+    <TextView
+        android:id="@+id/square5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/square6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/square4"
+        app:layout_constraintTop_toBottomOf="@+id/square2" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/square7"
+        app:layout_constraintEnd_toStartOf="@+id/square2"
+        app:layout_constraintStart_toEndOf="@+id/square1"
+        app:layout_constraintTop_toTopOf="@+id/square1" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/square7"
+        app:layout_constraintEnd_toStartOf="@+id/square3"
+        app:layout_constraintStart_toEndOf="@+id/square2"
+        app:layout_constraintTop_toTopOf="@+id/square1" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/square2"
+        app:layout_constraintEnd_toEndOf="@+id/square3"
+        app:layout_constraintStart_toStartOf="@+id/square1"
+        app:layout_constraintTop_toBottomOf="@+id/square2" />
+
+
+    <Button
+        android:id="@+id/finishGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="New game"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/square8" />
+
+    <TextView
+        android:id="@+id/scoreX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="632dp"
+        android:text="Score X: 0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/scoreO" />
+
+    <TextView
+        android:id="@+id/scoreO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="580dp"
+        android:text="Score O: 0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/scoreX" />
+</androidx.constraintlayout.widget.ConstraintLayout>
