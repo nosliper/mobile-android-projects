@@ -5,6 +5,7 @@ import android.widget.Button
 import android.widget.TextView
 
 class Game (squares: Array<TextView>, newGameButton: Button) {
+
     private var currentPlayer: Int = 1
     var scoreX: Int = 0
     var scoreO: Int = 0
@@ -12,6 +13,7 @@ class Game (squares: Array<TextView>, newGameButton: Button) {
     private var gameState: Array<Int>
     private var newGame: Button
     lateinit var squares: Array<TextView>
+
     init {
         squares.forEachIndexed { index, square -> square.setOnClickListener { markSquare(square, index) } }
         gameState = Array(9) { 0 }
@@ -28,11 +30,13 @@ class Game (squares: Array<TextView>, newGameButton: Button) {
 
     private fun processMove(index: Int) {
         gameState[index] = currentPlayer
+
         if (checkForWinner()) {
             scoreX += if (currentPlayer == 1) 1 else 0
             scoreO += if (currentPlayer == 2) 1 else 0
         }
         hasGameEnded = checkForDraw() || checkForWinner()
+
         if (hasGameEnded) {
             newGame.visibility = View.VISIBLE
             resetGameState()

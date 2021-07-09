@@ -1,6 +1,5 @@
 package work.avila.tictactoe
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -11,6 +10,7 @@ class GameActivity : AppCompatActivity() {
 
     private lateinit var binding: GameActivityBinding
     private lateinit var game: Game
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = GameActivityBinding.inflate(layoutInflater)
@@ -26,7 +26,9 @@ class GameActivity : AppCompatActivity() {
             binding.square7,
             binding.square8,
             binding.square9)
+
         game = Game(squares, newGameButton)
+        updateScore(game)
 
         newGameButton.setOnClickListener {
             updateScore(game)
@@ -39,13 +41,11 @@ class GameActivity : AppCompatActivity() {
     private fun clearSquares(squares: Array<TextView>) {
         for (square in squares) {
             square.text = ""
-            square.isEnabled = true
         }
     }
 
-    @SuppressLint("SetTextI18n")
     private fun updateScore(game: Game) {
-        binding.scoreX.text = "Score X: ${game.scoreX}"
-        binding.scoreO.text = "Score O: ${game.scoreO}"
+        binding.scoreX.text = getString(R.string.scorex, game.scoreX)
+        binding.scoreO.text = getString(R.string.scoreo, game.scoreO)
     }
 }
