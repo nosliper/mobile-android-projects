@@ -13,11 +13,24 @@ import android.widget.Toast
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import work.avila.flashlight.databinding.ActivityMainBinding
 
 import kotlinx.coroutines.*
 
 class MainActivity : AppCompatActivity(), SensorEventListener {
+
+    class SOSViewModel(private var flashlight: Flashlight): ViewModel() {
+        fun startSOSMode(): Job {
+            return viewModelScope.launch {
+                while (true) {
+                    delay(500)
+                    flashlight?.toggle()
+                }
+            }
+        }
+    }
 
     private lateinit var binding: ActivityMainBinding
     private var detectDarkness: Boolean = false
@@ -63,9 +76,9 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         if (sosMode) {
             sosModeJob?.cancel()
             flashlight?.toggle(false)
-            binding.sosMode.text = getString(R.string.sos_mode,"OFF")
+            binding.sosMode.text = getString(R.string.sos_mode, "OFF")
         } else {
-            sosModeJob = startSOSMode()
+            sosModeJob = flashlight?.let { SOSViewModel(it).startSOSMode() }
             binding.sosMode.text = getString(R.string.sos_mode, "ON")
         }
         sosMode = !sosMode
@@ -118,13 +131,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     private fun print(text: String) {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
-    }
-
-    private fun startSOSMode() = GlobalScope.launch {
-        while (true) {
-            delay(500)
-            flashlight?.toggle()
-        }
     }
 
     companion object {
