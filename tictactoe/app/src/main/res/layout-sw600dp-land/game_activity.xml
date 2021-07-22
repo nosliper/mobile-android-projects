@@ -11,7 +11,7 @@
     <TextView
         android:id="@+id/square1"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="150dp"
         android:gravity="center"
         android:textColor="#000000"
         android:textSize="36sp"
@@ -27,7 +27,7 @@
     <TextView
         android:id="@+id/square2"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="150dp"
         android:gravity="center"
         android:textColor="#000000"
         android:textSize="36sp"
@@ -42,7 +42,7 @@
     <TextView
         android:id="@+id/square3"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="150dp"
         android:gravity="center"
         android:textColor="#000000"
         android:textSize="36sp"
@@ -57,7 +57,7 @@
     <TextView
         android:id="@+id/square4"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="150dp"
         android:gravity="center"
         android:textColor="#000000"
         android:textSize="36sp"
@@ -72,7 +72,7 @@
     <TextView
         android:id="@+id/square5"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="150dp"
         android:gravity="center"
         android:textColor="#000000"
         android:textSize="36sp"
@@ -86,7 +86,7 @@
     <TextView
         android:id="@+id/square6"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="150dp"
         android:gravity="center"
         android:textColor="#000000"
         android:textSize="36sp"
@@ -100,7 +100,7 @@
     <TextView
         android:id="@+id/square7"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="150dp"
         android:layout_marginBottom="24dp"
         android:gravity="center"
         android:textColor="#000000"
@@ -116,7 +116,7 @@
     <TextView
         android:id="@+id/square8"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="150dp"
         android:layout_marginBottom="24dp"
         android:gravity="center"
         android:textColor="#000000"
@@ -131,7 +131,7 @@
     <TextView
         android:id="@+id/square9"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="150dp"
         android:layout_marginBottom="24dp"
         android:gravity="center"
         android:textColor="#000000"
@@ -187,41 +187,46 @@
         android:id="@+id/finishGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
         android:backgroundTint="@color/black"
         android:text="@string/new_game"
         android:textColor="@color/white"
-        android:visibility="gone"
+        android:textSize="50dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/square8" />
+        app:layout_constraintTop_toBottomOf="@+id/square8" />
 
     <TextView
         android:id="@+id/scoreX"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:text="@string/scoreo"
         android:textColor="@color/black"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/square1"
+        android:textSize="50sp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/scoreO"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/scoreO"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:text="@string/scorex"
         android:textColor="@color/black"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/square3"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@+id/scoreX"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
