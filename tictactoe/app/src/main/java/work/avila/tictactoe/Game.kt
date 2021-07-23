@@ -6,11 +6,11 @@ import android.widget.TextView
 
 class Game (squares: Array<TextView>, newGameButton: Button) {
 
-    private var currentPlayer: Int = 1
+    var currentPlayer: Int = 1
     var scoreX: Int = 0
     var scoreO: Int = 0
     var hasGameEnded: Boolean = false
-    private var gameState: Array<Int>
+    var gameState: Array<Int>
     private var newGame: Button
     lateinit var squares: Array<TextView>
 
@@ -39,11 +39,10 @@ class Game (squares: Array<TextView>, newGameButton: Button) {
 
         if (hasGameEnded) {
             newGame.visibility = View.VISIBLE
-            resetGameState()
         }
     }
 
-    private fun resetGameState() {
+    fun resetGameState() {
         for (i in gameState.indices) {
             gameState[i] = 0
         }
